@@ -1,0 +1,541 @@
+
+<?php
+$page_title = "DoodleSphere - 12,500+ Preschool Learning & Coloring Activities";
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php echo $page_title; ?></title>
+    <meta name="description" content="One Mega Bundle for Learning, Creativity & Screen-Free Fun! 12,500+ Preschool Learning & Coloring Activities. 10,000+ Worksheets & 2,500+ Coloring Pages. Instant Digital Download.">
+    <meta name="keywords" content="preschool worksheets, coloring pages, kids activities, educational printables, learning bundle, homeschool">
+    <meta property="og:title" content="DoodleSphere - 12,500+ Preschool Learning & Coloring Activities">
+    <meta property="og:description" content="One Mega Bundle for Learning, Creativity & Screen-Free Fun!">
+    <meta property="og:image" content="images/hero-stack.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,700&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar" id="navbar">
+    <div class="nav-inner">
+        <!-- Logo + Brand Name + Tagline -->
+        <a href="#" class="nav-logo-link">
+            <img src="images/logo.png" alt="DoodleSphere" class="nav-logo-img">
+            <div class="nav-brand-text">
+                <span class="brand-name"><span class="brand-doodle">Doodle</span><span class="brand-sphere">Sphere</span></span>
+                <span class="brand-tagline">Learn &bull; Create &bull; Grow</span>
+            </div>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#what-you-get" class="nav-link">What You Get</a></li>
+            <li><a href="#features" class="nav-link">Features</a></li>
+            <li><a href="#reviews" class="nav-link">Reviews</a></li>
+            <li><a href="#faq" class="nav-link">FAQ</a></li>
+            <li><a href="payment.php" class="nav-btn" id="navBundleBtn">Get the Bundle &rarr;</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+    <!-- decorative stars -->
+    <span class="deco-star s1">⭐</span>
+    <span class="deco-star s2">✨</span>
+    <span class="deco-star s3">🌟</span>
+    <span class="deco-star s4">⭐</span>
+    <span class="deco-star s5">✨</span>
+
+    <div class="wrap">
+        <div class="hero-grid">
+            <!-- LEFT -->
+            <div class="hero-left">
+                <p class="hero-eyebrow">PRINT &middot; LEARN &middot; CREATE &middot; GROW</p>
+                <h1 class="hero-h1">
+                    <span class="hero-number">12,500+</span>
+                    Preschool Learning &amp;<br>Coloring Activities
+                </h1>
+                <p class="hero-tag">One Mega Bundle for Learning,<br>Creativity &amp; Screen-Free Fun!</p>
+                <p class="hero-desc">Give your child thousands of engaging worksheets and coloring pages designed to build skills, spark creativity and make learning enjoyable.</p>
+
+                <div class="hero-icons-row">
+                    <div class="hero-icon-item">
+                        <div class="hicon">⚡</div>
+                        <span>Instant<br>Digital Download</span>
+                    </div>
+                    <div class="hero-icon-item">
+                        <div class="hicon">♾️</div>
+                        <span>Use Again<br>&amp; Again</span>
+                    </div>
+                    <div class="hero-icon-item">
+                        <div class="hicon">🖨️</div>
+                        <span>Print<br>at Home</span>
+                    </div>
+                    <div class="hero-icon-item">
+                        <div class="hicon">👦</div>
+                        <span>Perfect for<br>Ages 2-6</span>
+                    </div>
+                </div>
+
+                <div class="hero-cta-wrap">
+                    <a href="payment.php" class="btn-orange-large" id="heroBundleBtn">
+                        GET THE MEGA BUNDLE NOW &rarr;
+                    </a>
+                    <p class="cta-note">⚡ Instant Access &nbsp;&bull;&nbsp; 📦 No Physical Product</p>
+                </div>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="hero-right">
+                <div class="hero-stat-box">
+                    <div class="stat-line"><strong>10,000+</strong><br><span>Worksheets</span></div>
+                    <div class="stat-plus">+</div>
+                    <div class="stat-line"><strong>2,500+</strong><br><span>Coloring Pages</span></div>
+                </div>
+                <img src="images/hero-stack.jpg" alt="Trace Letter, Numbers, Shapes Worksheets" class="hero-img">
+                <div class="hero-quote-box">
+                    <em>Small Steps</em><br>
+                    <strong>Big Dreams</strong><br>
+                    <em>Brighter Futures</em>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== ONE BUNDLE BANNER ===== -->
+<section class="bundle-banner">
+    <div class="wrap">
+        <h2 class="banner-title">One Bundle. Thousands of Activities. Endless Learning Fun.</h2>
+        <p class="banner-sub">Instead of searching for individual worksheets and coloring pages, get a massive ready-to-use activity library in one convenient bundle.</p>
+        <div class="banner-icons">
+            <div class="b-icon-item">
+                <div class="b-icon">📋</div>
+                <strong>10,000+</strong>
+                <span>Preschool Worksheets</span>
+            </div>
+            <div class="b-icon-item">
+                <div class="b-icon">🎨</div>
+                <strong>2,500+</strong>
+                <span>Coloring Pages</span>
+            </div>
+            <div class="b-icon-item">
+                <div class="b-icon">📚</div>
+                <strong>Multiple</strong>
+                <span>Learning Activities</span>
+            </div>
+            <div class="b-icon-item">
+                <div class="b-icon">📥</div>
+                <strong>Digital</strong>
+                <span>PDF Files</span>
+            </div>
+            <div class="b-icon-item">
+                <div class="b-icon">♾️</div>
+                <strong>Use Again</strong>
+                <span>&amp; Again</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== COLORING PAGES SECTION ===== -->
+<section class="section-coloring" id="what-you-get">
+    <div class="wrap">
+        <div class="two-col">
+            <div class="col-text">
+                <h2 class="accent-title"><span class="orange">2,500+</span> Coloring Pages</h2>
+                <h3 class="section-h3">to Keep Little Hands Busy</h3>
+                <p class="section-p">Kids love coloring — and now you have thousands of pages ready to print whenever you need them.</p>
+                <ul class="check-ul">
+                    <li><span class="ck">✅</span> Quiet time</li>
+                    <li><span class="ck">✅</span> Weekend activities</li>
+                    <li><span class="ck">✅</span> Rainy days</li>
+                    <li><span class="ck">✅</span> Classroom activities</li>
+                    <li><span class="ck">✅</span> Homeschooling</li>
+                    <li><span class="ck">✅</span> Travel</li>
+                    <li><span class="ck">✅</span> Screen-free entertainment</li>
+                </ul>
+                <p class="italic-tag">🖨️ <em>Print. Color. Enjoy. Enjoy. Repeat.</em></p>
+            </div>
+            <div class="col-img">
+                <img src="images/coloring-row.jpg" alt="Coloring pages - Dino, Cat, Space" class="sec-img">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== WORKSHEETS SECTION ===== -->
+<section class="section-worksheets" id="features">
+    <div class="wrap">
+        <div class="two-col reverse">
+            <div class="col-img">
+                <img src="images/worksheet-grid.jpg" alt="Worksheet types - Alphabet, Numbers, Tracing, Shapes, Match, Activity" class="sec-img">
+            </div>
+            <div class="col-text">
+                <h2 class="accent-title"><span class="orange">10,000+</span> Preschool Worksheets</h2>
+                <h3 class="section-h3">for Everyday Learning</h3>
+                <p class="section-p">Make learning practice easy with a huge collection of preschool activities.</p>
+                <ul class="check-ul">
+                    <li><span class="ck">✅</span> Alphabet &amp; Letters</li>
+                    <li><span class="ck">✅</span> Numbers &amp; Counting</li>
+                    <li><span class="ck">✅</span> Tracing &amp; Pre-Writing</li>
+                    <li><span class="ck">✅</span> Shapes &amp; Colors</li>
+                    <li><span class="ck">✅</span> Matching &amp; Recognition</li>
+                    <li><span class="ck">✅</span> Early Learning Activities</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== PERFECT FOR ===== -->
+<section class="section-perfect">
+    <div class="wrap">
+        <h2 class="center-title">Perfect For...</h2>
+        <div class="perfect-row">
+            <div class="perf-card">
+                <div class="perf-emoji">👨‍👩‍👧</div>
+                <strong>Parents</strong>
+                <p>Keep children engaged with easy-to-print activities at home.</p>
+            </div>
+            <div class="perf-card">
+                <div class="perf-emoji">🏠</div>
+                <strong>Homeschool Families</strong>
+                <p>Build a large printable activity library for learning at home.</p>
+            </div>
+            <div class="perf-card">
+                <div class="perf-emoji">🔤</div>
+                <strong>Teachers &amp; Educators</strong>
+                <p>Have extra activities ready whenever you need them.</p>
+            </div>
+            <div class="perf-card">
+                <div class="perf-emoji">🎒</div>
+                <strong>Preschool &amp; Kindergarten</strong>
+                <p>Use printable activities for practice, centers and quiet time.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== GETTING STARTED ===== -->
+<section class="section-steps">
+    <div class="wrap">
+        <h2 class="center-title">Getting Started Is Easy</h2>
+        <div class="steps-wrap">
+            <div class="step">
+                <div class="step-bubble">
+                    <span class="step-n">1</span>
+                    <span class="step-ico">🛒</span>
+                </div>
+                <div class="step-info">
+                    <strong>Purchase</strong>
+                    <p>Complete your order securely.</p>
+                </div>
+            </div>
+            <div class="step-arrow">&#8594;</div>
+            <div class="step">
+                <div class="step-bubble">
+                    <span class="step-n">2</span>
+                    <span class="step-ico">📧</span>
+                </div>
+                <div class="step-info">
+                    <strong>Get Instant Access</strong>
+                    <p>Receive access to your digital files.</p>
+                </div>
+            </div>
+            <div class="step-arrow">&#8594;</div>
+            <div class="step">
+                <div class="step-bubble">
+                    <span class="step-n">3</span>
+                    <span class="step-ico">☁️</span>
+                </div>
+                <div class="step-info">
+                    <strong>Download</strong>
+                    <p>Download the activity bundle to your device.</p>
+                </div>
+            </div>
+            <div class="step-arrow">&#8594;</div>
+            <div class="step">
+                <div class="step-bubble">
+                    <span class="step-n">4</span>
+                    <span class="step-ico">🖨️</span>
+                </div>
+                <div class="step-info">
+                    <strong>Print &amp; Play</strong>
+                    <p>Print the pages whenever you need a new activity.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== INSTANT DIGITAL DOWNLOAD ===== -->
+<section class="section-digital">
+    <div class="wrap">
+        <div class="digital-grid">
+            <div class="digital-left">
+                <h2 class="digital-title">Instant Digital Download</h2>
+                <ul class="digital-list">
+                    <li>✅ No waiting for shipping.</li>
+                    <li>✅ No physical package.</li>
+                    <li>✅ No delivery delays.</li>
+                    <li>✅ Print again when needed.</li>
+                    <li>✅ Use on multiple devices.</li>
+                </ul>
+            </div>
+            <div class="digital-center">
+                <img src="images/device-mockup.jpg" alt="Digital download on laptop and phone" class="sec-img rounded-img">
+            </div>
+            <div class="digital-right">
+                <div class="d-badge">📱 Digital Product</div>
+                <div class="d-badge">⚡ Instant Access</div>
+                <div class="d-badge">🖨️ Print at Home</div>
+                <div class="d-badge">♾️ Use Again &amp; Again</div>
+                <div class="learning-tag">Learning<br><em>Anytime</em><br>Anywhere 💛</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== REVIEWS ===== -->
+<section class="section-reviews" id="reviews">
+    <div class="wrap">
+        <h2 class="center-title">What Our International Customers say</h2>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"I found this very awesome. Purchased item: 11000+ Preschool Kindergarten Printable Activity Worksheets Al..."</p>
+                <div class="reviewer">
+                    <div class="rev-av" style="background:#e07a5f;">D</div>
+                    <div>
+                        <strong>Dani Hazel</strong><br>
+                        <small>24 Aug, 2024</small>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"Was a great purchase made. Purchased item: 11000+ Preschool Kindergarten Printable Activity Worksheets Al..."</p>
+                <div class="reviewer">
+                    <div class="rev-av" style="background:#2a9d8f;">R</div>
+                    <div>
+                        <strong>Reviewed by Inactive</strong><br>
+                        <small>16 Jul, 2024</small>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"Great printable worksheet! amazing work! Purchased item: 11000+ Preschool Kindergarten Printable Activity Worksheets Al..."</p>
+                <div class="reviewer">
+                    <div class="rev-av" style="background:#457b9d;">R</div>
+                    <div>
+                        <strong>Reviewed by Inactive</strong><br>
+                        <small>29 Jul, 2024</small>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"I am over the moon with the amount of templates. I love it! I love how I can print it out and use it for my children to keep them busy!"</p>
+                <div class="reviewer">
+                    <div class="rev-av" style="background:#f4a261;">P</div>
+                    <div>
+                        <strong>Paz</strong><br>
+                        <small>12 Jul, 2024</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="reviews-more">
+            <a href="#reviews" class="btn-outline-orange" id="viewMoreBtn">View More Reviews &rarr;</a>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="section-faq" id="faq">
+    <div class="wrap">
+        <h2 class="center-title">Frequently Asked Questions</h2>
+        <div class="faq-grid">
+            <div class="faq-col">
+                <div class="faq-item">
+                    <button class="faq-q" id="fq1" aria-expanded="false">Is this a physical product? <span class="fq-plus">+</span></button>
+                    <div class="faq-a" id="fa1">No! This is 100% digital. After purchase you'll receive instant download access. No shipping, no waiting!</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" id="fq2" aria-expanded="false">How will I receive my files? <span class="fq-plus">+</span></button>
+                    <div class="faq-a" id="fa2">After completing your purchase you'll receive an email with your download link. You can also access files from your account dashboard instantly.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" id="fq3" aria-expanded="false">Can I print the worksheets? <span class="fq-plus">+</span></button>
+                    <div class="faq-a" id="fa3">Absolutely! Print as many times as you need on regular paper at home. You can even laminate them for repeated use!</div>
+                </div>
+            </div>
+            <div class="faq-col">
+                <div class="faq-item">
+                    <button class="faq-q" id="fq4" aria-expanded="false">What age group is this for? <span class="fq-plus">+</span></button>
+                    <div class="faq-a" id="fa4">This bundle is designed for children aged 2–6, perfect for preschool and kindergarten. Activities range from simple coloring to tracing and early learning.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" id="fq5" aria-expanded="false">Can I print the pages more than once? <span class="fq-plus">+</span></button>
+                    <div class="faq-a" id="fa5">Yes! Once you purchase, you own it forever. Print the same page 10 or 100 times — for multiple children, classrooms, or whenever you need a fresh copy.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" id="fq6" aria-expanded="false">Do I need special software? <span class="fq-plus">+</span></button>
+                    <div class="faq-a" id="fa6">No special software needed! All files are in PDF format which you can open with free Adobe Acrobat Reader or any PDF viewer on any device.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section class="section-final-cta" id="buy">
+    <div class="wrap">
+        <div class="cta-grid">
+
+            <!-- LEFT: Learn Create Grow cursive text with yellow heart -->
+            <div class="cta-words">
+                <span class="cta-deco-star star-1">⭐</span>
+                <div class="cta-script-group">
+                    <div class="cta-lcg">
+                        <span class="lcg-word">Learn</span>
+                        <span class="lcg-word">Create</span>
+                        <span class="lcg-word">Grow</span>
+                    </div>
+                    <span class="lcg-heart">💛</span>
+                </div>
+                <span class="cta-deco-star star-2">⭐</span>
+            </div>
+
+            <!-- CENTER: Headline + Button + Instant Badges -->
+            <div class="cta-center">
+                <div class="cta-h2-wrap">
+                    <span class="cta-deco-star star-h-left">⭐</span>
+                    <h2 class="cta-h2">Ready to Fill Your Activity Library?</h2>
+                    <span class="cta-deco-star star-h-right">⭐</span>
+                </div>
+                <p class="cta-sub">Give your little learner thousands of pages of learning + creativity + coloring fun.</p>
+                <div class="cta-btn-wrap">
+                    <a href="payment.php" class="btn-cta-gold" id="finalBundleBtn">
+                        GET THE COMPLETE BUNDLE <span class="cta-arrow">&rarr;</span>
+                    </a>
+                </div>
+                <div class="cta-badges">
+                    <span class="cta-badge-item">
+                        <svg class="cbadge-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                        Instant Digital Download
+                    </span>
+                    <span class="cta-badge-dot">&bull;</span>
+                    <span class="cta-badge-item">
+                        <svg class="cbadge-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8 0-1.85.63-3.55 1.69-4.9L16.9 18.31C15.55 19.37 13.85 20 12 20zm6.31-3.1L7.1 5.69C8.45 4.63 10.15 4 12 4c4.42 0 8 3.58 8 8 0 1.85-.63 3.55-1.69 4.9z"/></svg>
+                        No Physical Product
+                    </span>
+                </div>
+            </div>
+
+            <!-- RIGHT: Girl photo -->
+            <div class="cta-img-col">
+                <span class="cta-deco-star star-3">⭐</span>
+                <span class="cta-deco-star star-4">⭐</span>
+                <img src="images/cta-girl.jpg" alt="Happy child learning" class="cta-girl-img">
+            </div>
+
+        </div>
+    </div>
+
+    <!-- WAVE DIVIDER CONNECTING CTA TO FOOTER -->
+    <div class="cta-wave-divider">
+        <svg viewBox="0 0 1440 90" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,30 C260,0 520,56 780,26 C1040,-4 1260,36 1440,22" stroke="#26a2af" stroke-width="3" fill="none" opacity="0.85"/>
+            <path d="M0,37 C280,7 540,63 800,33 C1060,3 1280,43 1440,29" stroke="#f6b93b" stroke-width="2.5" fill="none" opacity="0.75"/>
+            <path d="M0,45 C240,12 490,68 760,36 C1030,4 1260,45 1440,32 L1440,90 L0,90 Z" fill="#084d56"/>
+        </svg>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+    <div class="wrap">
+        <!-- TOP ROW: Brand Left | Navigation Center | Thanks Right -->
+        <div class="footer-top-row">
+
+            <!-- LEFT: Logo + Brand Name + Tagline -->
+            <div class="footer-col-brand">
+                <a href="#" class="footer-logo-link">
+                    <img src="images/logo.png" alt="DoodleSphere" class="footer-logo-img">
+                    <div class="footer-brand-text">
+                        <span class="footer-brand-name">
+                            <span class="fb-doodle">Doodle</span><span class="fb-sphere">Sphere</span>
+                        </span>
+                        <span class="footer-brand-tag">Learn &bull; Create &bull; Grow</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- CENTER: Horizontal nav links -->
+            <div class="footer-col-nav">
+                <ul class="footer-nav-list">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#what-you-get">Shop</a></li>
+                    <li><a href="#perfect-for">About Us</a></li>
+                    <li><a href="#features">Blog</a></li>
+                    <li><a href="#faq">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- RIGHT: Thank you text -->
+            <div class="footer-col-thanks">
+                <span class="footer-thanks-text">Thank you for supporting small business! <span class="pink-heart">💖</span></span>
+            </div>
+
+        </div>
+
+        <!-- CENTER ROW: Social Media Colored Circle Icons -->
+        <div class="footer-social-row">
+            <div class="footer-social">
+                <a href="#" class="fsoc fsoc-ig" aria-label="Instagram">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                </a>
+                <a href="#" class="fsoc fsoc-fb" aria-label="Facebook">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+                </a>
+                <a href="#" class="fsoc fsoc-pt" aria-label="Pinterest">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+                </a>
+                <a href="#" class="fsoc fsoc-yt" aria-label="YouTube">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOTTOM BAR: Copyright Left | Policies Right -->
+    <div class="footer-bar">
+        <div class="wrap">
+            <div class="footer-bar-inner">
+                <p>&copy; 2026 DoodleSphere. All rights reserved.</p>
+                <div class="footer-bar-links">
+                    <a href="#">Privacy Policy</a>
+                    <span class="bar-pipe">|</span>
+                    <a href="#">Terms of Use</a>
+                    <span class="bar-pipe">|</span>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
