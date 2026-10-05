@@ -465,7 +465,6 @@
     🔒 Secure Checkout &nbsp;·&nbsp; 🛡️ SSL Encrypted &nbsp;·&nbsp; ✅ Instant Digital Delivery
 </div>
 
-<!-- ===== SUCCESS PAGE ===== -->
 <div class="success-screen" id="successScreen" style="display:none;">
     <div class="success-icon">🎉</div>
     <div class="success-card">
@@ -499,8 +498,6 @@
     </div>
 </div>
 
-
-<!-- ===== CHECKOUT PAGE ===== -->
 <div class="pay-main" id="checkoutMain">
 
     <!-- LEFT: Order Summary -->
@@ -560,9 +557,98 @@
     <!-- RIGHT: Checkout Form -->
     <div class="checkout-form-card">
         <h2>Complete Your Order</h2>
-        <p class="form-subtitle">You're one step away from 12,500+ activities! Fill in the details below.</p>
+        <form id="checkoutForm" method="POST" action="" novalidate>
 
-        
+            <!-- Contact Info -->
+            <div class="form-section-title">👤 Contact Information</div>
+            <div class="form-group">
+                <label for="name">Full Name <span class="required">*</span></label>
+                <input type="text" id="name" name="name" class="form-control"
+                       placeholder="Your full name"
+                       value=""
+                       required>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="email">Email Address <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" class="form-control"
+                           placeholder="your@email.com"
+                           value=""
+                           required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" class="form-control"
+                           placeholder="+91 XXXXX XXXXX"
+                           value="">
+                </div>
+            </div>
+
+            <!-- Payment Method -->
+            <div class="form-section-title">💳 Payment Method</div>
+            <div class="payment-tabs">
+                <div class="pay-tab active" data-panel="razorpay" id="tab-razorpay">
+                    <span class="pay-tab-icon">💳</span>
+                    <span>Card / UPI / NetBanking</span>
+                </div>
+                <div class="pay-tab" data-panel="paypal" id="tab-paypal">
+                    <span class="pay-tab-icon">🌐</span>
+                    <span>PayPal</span>
+                </div>
+            </div>
+
+            <!-- Razorpay Panel -->
+            <div class="payment-panel active" id="panel-razorpay">
+                <div style="background:#f8fafc;border-radius:14px;padding:20px;border:2px solid #e5e7eb;text-align:center;">
+                    <div style="font-size:32px;margin-bottom:10px;">🏦</div>
+                    <p style="font-size:15px;font-weight:700;color:#1a1a2e;margin-bottom:6px;">Pay with Razorpay</p>
+                    <p style="font-size:13px;color:#666;line-height:1.6;">Supports: Credit/Debit Card, UPI, NetBanking, Wallets, EMI</p>
+                    <div style="display:flex;justify-content:center;gap:10px;margin-top:14px;flex-wrap:wrap;">
+                        <span style="background:white;padding:5px 12px;border-radius:8px;font-size:12px;font-weight:700;color:#555;border:1px solid #e5e7eb;">UPI</span>
+                        <span style="background:white;padding:5px 12px;border-radius:8px;font-size:12px;font-weight:700;color:#555;border:1px solid #e5e7eb;">VISA</span>
+                        <span style="background:white;padding:5px 12px;border-radius:8px;font-size:12px;font-weight:700;color:#555;border:1px solid #e5e7eb;">Mastercard</span>
+                        <span style="background:white;padding:5px 12px;border-radius:8px;font-size:12px;font-weight:700;color:#555;border:1px solid #e5e7eb;">NetBanking</span>
+                    </div>
+                    <input type="hidden" name="payment_method" value="razorpay">
+                </div>
+            </div>
+
+            <!-- PayPal Panel -->
+            <div class="payment-panel" id="panel-paypal">
+                <div style="background:#f8fafc;border-radius:14px;padding:20px;border:2px solid #e5e7eb;text-align:center;">
+                    <div style="font-size:32px;margin-bottom:10px;">🌐</div>
+                    <p style="font-size:15px;font-weight:700;color:#1a1a2e;margin-bottom:6px;">Pay with PayPal</p>
+                    <p style="font-size:13px;color:#666;line-height:1.6;">You will be redirected to PayPal to complete your payment securely.</p>
+                </div>
+            </div>
+
+            <!-- Terms -->
+            <div class="form-group" style="margin-top:20px;">
+                <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;font-weight:400;">
+                    <input type="checkbox" id="terms" name="terms" required
+                           style="width:18px;height:18px;margin-top:2px;accent-color:var(--primary-orange);">
+                    <span style="font-size:14px;color:#555;line-height:1.5;">
+                        I agree to the <a href="#" style="color:var(--primary-orange);font-weight:700;">Terms of Use</a>
+                        and <a href="#" style="color:var(--primary-orange);font-weight:700;">Privacy Policy</a>.
+                        I understand this is a digital product with no refund after download.
+                    </span>
+                </label>
+            </div>
+
+            <!-- Submit -->
+            <button type="submit" class="submit-btn" id="submitBtn">
+                <span id="btnText">🔒 Complete Purchase – ₹27.00</span>
+                <span class="btn-loader" id="btnLoader"></span>
+            </button>
+
+            <div class="security-note">
+                🔒 Your payment is 100% secured &amp; encrypted
+            </div>
+
+        </form>
+    </div>
+
+</div>
 
 <!-- Footer -->
 <footer style="text-align:center;padding:30px 20px;font-size:13px;color:#999;margin-top:40px;border-top:1px solid #f0f0f0;">
@@ -637,13 +723,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 // For now, submit the form normally
                 setTimeout(function() {
-    document.getElementById("checkoutMain").style.display = "none";
-    document.getElementById("orderIdBadge").textContent = "Order ID: DS" + Math.floor(100000 + Math.random() * 900000);
-    var conf = document.getElementById("confirmEmailVal");
+    document.getElementById('checkoutMain').style.display = 'none';
+    document.getElementById('orderIdBadge').textContent = 'Order ID: DS' + Math.floor(100000 + Math.random() * 900000);
+    var conf = document.getElementById('confirmEmailVal');
     if (conf) conf.textContent = email.value.trim();
-    var scr = document.getElementById("successScreen");
-    if (scr) scr.style.display = "flex";
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    var scr = document.getElementById('successScreen');
+    if (scr) scr.style.display = 'flex';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }, 800);
             }
         });
