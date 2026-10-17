@@ -1,156 +1,110 @@
-/* DoodleSphere – script.js */
+/* ==========================================================================
+   DoodleSphere - Interactive Landing Page Logic
+   ========================================================================== */
+
+/**
+ * CONFIGURATION: Single Configurable Purchase URL
+ * Update this URL to point to Cashfree checkout or payment gateway
+ */
+const PURCHASE_URL = "payment.php";
+
 document.addEventListener('DOMContentLoaded', function () {
 
-    /* ===== MOBILE NAV ===== */
-    const hamburger = document.getElementById('hamburger');
-    const navMenu   = document.getElementById('navMenu');
+    /* ===== WIRE UP ALL PURCHASE CTA BUTTONS ===== */
+    const purchaseButtons = document.querySelectorAll('.js-purchase-btn');
+    purchaseButtons.forEach(btn => {
+        btn.setAttribute('href', PURCHASE_URL);
+        btn.addEventListener('click', function (e) {
+            // Optional analytics hook can be added here
+            console.log('Redirecting to purchase URL:', PURCHASE_URL);
+        });
+    });
 
-    if (hamburger && navMenu) {
-        hamburger.addEventListener('click', function () {
-            navMenu.classList.toggle('open');
-            const spans = hamburger.querySelectorAll('span');
-            if (navMenu.classList.contains('open')) {
-                spans[0].style.transform = 'rotate(45deg) translate(5.5px, 6px)';
+    /* ===== MOBILE NAVBAR TOGGLE ===== */
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const mobileDrawer = document.getElementById('mobileNavDrawer');
+
+    if (hamburgerBtn && mobileDrawer) {
+        hamburgerBtn.addEventListener('click', function () {
+            const isOpen = mobileDrawer.classList.toggle('active');
+            hamburgerBtn.setAttribute('aria-expanded', isOpen);
+
+            const spans = hamburgerBtn.querySelectorAll('span');
+            if (isOpen) {
+                spans[0].style.transform = 'translateY(8.5px) rotate(45deg)';
                 spans[1].style.opacity = '0';
-                spans[2].style.transform = 'rotate(-45deg) translate(5.5px, -6px)';
+                spans[2].style.transform = 'translateY(-8.5px) rotate(-45deg)';
             } else {
                 spans.forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
             }
         });
-        // Close when a link is clicked
-        navMenu.querySelectorAll('a').forEach(a => {
-            a.addEventListener('click', () => {
-                navMenu.classList.remove('open');
-                hamburger.querySelectorAll('span').forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
+
+        // Close when clicking mobile nav links
+        mobileDrawer.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function () {
+                mobileDrawer.classList.remove('active');
+                hamburgerBtn.setAttribute('aria-expanded', 'false');
+                hamburgerBtn.querySelectorAll('span').forEach(s => {
+                    s.style.transform = '';
+                    s.style.opacity = '';
+                });
             });
         });
-        // Close on outside click
-        document.addEventListener('click', e => {
-            if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
-                navMenu.classList.remove('open');
-                hamburger.querySelectorAll('span').forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
+
+        // Close when clicking outside
+        document.addEventListener('click', function (e) {
+            if (!hamburgerBtn.contains(e.target) && !mobileDrawer.contains(e.target)) {
+                mobileDrawer.classList.remove('active');
+                hamburgerBtn.setAttribute('aria-expanded', 'false');
+                hamburgerBtn.querySelectorAll('span').forEach(s => {
+                    s.style.transform = '';
+                    s.style.opacity = '';
+                });
             }
         });
     }
 
-    /* ===== STICKY NAVBAR SHADOW ===== */
+    /* ===== STICKY NAVBAR SCROLL SHADOW ===== */
     const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 60) {
-            navbar.style.boxShadow = '0 4px 28px rgba(0,0,0,0.12)';
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 40) {
+            navbar.style.boxShadow = '0 4px 20px rgba(16, 27, 85, 0.09)';
         } else {
-            navbar.style.boxShadow = '0 2px 15px rgba(0,0,0,0.07)';
+            navbar.style.boxShadow = '0 2px 8px rgba(16, 27, 85, 0.04)';
         }
     });
 
-    /* ===== FAQ ACCORDION ===== */
-    document.querySelectorAll('.faq-q').forEach(btn => {
-        btn.addEventListener('click', function () {
-            const item   = this.closest('.faq-item');
-            const isOpen = item.classList.contains('open');
-            // close all
-            document.querySelectorAll('.faq-item').forEach(i => {
-                i.classList.remove('open');
-                i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
-            });
-            if (!isOpen) {
-                item.classList.add('open');
-                this.setAttribute('aria-expanded', 'true');
-            }
-        });
-    });
-
-    /* ===== SMOOTH SCROLL ===== */
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-        a.addEventListener('click', function (e) {
-            const href = this.getAttribute('href');
-            if (href === '#') return;
-            const target = document.querySelector(href);
-            if (target) {
+    /* ===== SMOOTH SCROLLING FOR ANCHOR LINKS ===== */
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const targetId = this.getAttribute('href');
+            if (targetId === '#' || targetId === '') return;
+            const targetEl = document.querySelector(targetId);
+            if (targetEl) {
                 e.preventDefault();
-                const top = target.getBoundingClientRect().top + window.scrollY - 76;
-                window.scrollTo({ top, behavior: 'smooth' });
+                const headerOffset = 80;
+                const elementPosition = targetEl.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
             }
         });
     });
 
-    /* ===== SCROLL REVEAL ===== */
-    const revealEls = document.querySelectorAll(
-        '.b-icon-item, .perf-card, .review-card, .faq-item, ' +
-        '.hero-left, .hero-right, .col-text, .col-img, ' +
-        '.digital-left, .digital-center, .digital-right, ' +
-        '.step, .banner-title, .banner-sub, .center-title, ' +
-        '.accent-title, .section-h3, .cta-h2, .cta-sub, .cta-words'
-    );
-    revealEls.forEach((el, i) => {
-        el.classList.add('anim');
-        if (i % 3 === 1) el.classList.add('delay-1');
-        if (i % 3 === 2) el.classList.add('delay-2');
-    });
-
-    const io = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('show');
-                io.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
-
-    revealEls.forEach(el => io.observe(el));
-
-    /* ===== BUTTON RIPPLE EFFECT ===== */
-    document.querySelectorAll('.btn-orange-large, .btn-outline-orange').forEach(btn => {
-        btn.addEventListener('click', function (e) {
-            const rect = this.getBoundingClientRect();
-            const size = Math.max(rect.width, rect.height);
-            const ripple = document.createElement('span');
-            ripple.style.cssText = `
-                position:absolute; width:${size}px; height:${size}px;
-                left:${e.clientX - rect.left - size / 2}px;
-                top:${e.clientY - rect.top - size / 2}px;
-                background:rgba(255,255,255,0.38); border-radius:50%;
-                transform:scale(0); animation:ripple .6s linear;
-                pointer-events:none;
-            `;
-            this.style.position = 'relative';
-            this.style.overflow = 'hidden';
-            this.appendChild(ripple);
-            setTimeout(() => ripple.remove(), 620);
+    /* ===== WORKSHEET PREVIEW HOVER & CLICK EXPAND ===== */
+    const worksheetCards = document.querySelectorAll('.worksheet-card');
+    worksheetCards.forEach(card => {
+        card.addEventListener('click', function () {
+            // Subtle click bounce effect
+            this.style.transform = 'scale(0.97)';
+            setTimeout(() => {
+                this.style.transform = '';
+            }, 150);
         });
     });
 
-    /* Inject ripple keyframe once */
-    const style = document.createElement('style');
-    style.textContent = '@keyframes ripple{to{transform:scale(2.5);opacity:0}}';
-    document.head.appendChild(style);
-
-    /* ===== ANIMATED COUNTERS ===== */
-    function animCount(el, target, dur = 1800) {
-        let start = null;
-        function step(ts) {
-            if (!start) start = ts;
-            const progress = Math.min((ts - start) / dur, 1);
-            const val = Math.floor(progress * target);
-            el.textContent = val.toLocaleString() + '+';
-            if (progress < 1) requestAnimationFrame(step);
-        }
-        requestAnimationFrame(step);
-    }
-
-    const countObs = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const el  = entry.target;
-                const num = parseInt(el.textContent.replace(/[^0-9]/g, ''));
-                if (num > 0) animCount(el, num);
-                countObs.unobserve(el);
-            }
-        });
-    }, { threshold: 0.6 });
-
-    document.querySelectorAll('.b-icon-item strong').forEach(el => {
-        if (/\d/.test(el.textContent)) countObs.observe(el);
-    });
-
+    console.log('DoodleSphere landing page initialized successfully.');
 });
