@@ -653,42 +653,30 @@ $product_price = "₹199";
             </div>
         </section>
 
-        <!-- ===== FINAL CTA SECTION ===== -->
+        <!-- ===== FINAL CTA / FOOTER BANNER SECTION ===== -->
         <section class="final-cta-section">
-            <!-- Decorative stickers -->
-            <span class="final-deco-sun" aria-hidden="true">☀️</span>
-            <span class="final-deco-heart" aria-hidden="true">💖</span>
+            <div class="container">
+                <div class="footer-cta-banner">
+                    <!-- Center Offer Content -->
+                    <div class="footer-cta-content">
+                        <h2 class="final-cta-title">Ready to Fill Your Activity Library?</h2>
+                        <p class="final-cta-sub">12,500+ preschool activities for just <span class="price-highlight"><?php echo $product_price; ?></span>.</p>
 
-            <div class="container final-cta-wrap">
-                <!-- Cartoon Boy Left -->
-                <div class="cta-character-col">
-                    <img src="images/cta-boy.jpg" alt="Happy cartoon boy waving" class="cta-character-img char-boy" loading="lazy" width="190" height="190">
-                </div>
+                        <a href="<?php echo htmlspecialchars($purchase_url); ?>" class="btn-primary-pill btn-large js-purchase-btn">
+                            Get Instant Access – <?php echo $product_price; ?> &rarr;
+                        </a>
 
-                <!-- Center Offer Content -->
-                <div class="final-cta-center">
-                    <h2 class="final-cta-title">Ready to Fill Your Activity Library?</h2>
-                    <p class="final-cta-sub">12,500+ preschool activities for just <span class="price-highlight"><?php echo $product_price; ?></span>.</p>
-
-                    <a href="<?php echo htmlspecialchars($purchase_url); ?>" class="btn-primary-pill btn-large js-purchase-btn">
-                        Get Instant Access – <?php echo $product_price; ?> &rarr;
-                    </a>
-
-                    <div class="trust-row">
-                        <div class="trust-item">
-                            <span class="trust-icon">🛡️</span>
-                            <span>Secure Payment via Cashfree</span>
-                        </div>
-                        <div class="trust-item">
-                            <span class="trust-icon">⚡</span>
-                            <span>Instant Access After Payment</span>
+                        <div class="trust-row">
+                            <div class="trust-item">
+                                <span class="trust-icon">🛡️</span>
+                                <span>Secure Payment via Cashfree</span>
+                            </div>
+                            <div class="trust-item">
+                                <span class="trust-icon">⚡</span>
+                                <span>Instant Access After Payment</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- Cartoon Girl Right -->
-                <div class="cta-character-col">
-                    <img src="images/cta-girl.jpg" alt="Happy cartoon girl smiling" class="cta-character-img char-girl" loading="lazy" width="190" height="190">
                 </div>
             </div>
         </section>
@@ -696,13 +684,6 @@ $product_price = "₹199";
 
     <!-- ===== FOOTER ===== -->
     <footer class="site-footer">
-        <!-- Footer Panoramic Banner -->
-        <div class="container footer-banner-wrap">
-            <a href="<?php echo htmlspecialchars($purchase_url); ?>" class="footer-banner-card js-purchase-btn" aria-label="Get Instant Access to 12,500+ Preschool Activities">
-                <img src="images/banner-footer.jpg" alt="DoodleSphere Preschool Learning and Coloring Activities" class="footer-banner-img" width="1024" height="213" loading="lazy">
-            </a>
-        </div>
-
         <div class="container footer-content">
             <div class="brand-text-col">
                 <span class="brand-title" style="font-size: 1.25rem;"><span class="brand-doodle">Doodle</span><span class="brand-sphere">Sphere</span></span>

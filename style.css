@@ -361,8 +361,7 @@ button {
     margin-bottom: 32px;
 }
 
-.hero-banner-card,
-.footer-banner-card {
+.hero-banner-card {
     display: block;
     width: 100%;
     border-radius: 20px;
@@ -374,24 +373,18 @@ button {
     text-decoration: none;
 }
 
-.hero-banner-card:hover,
-.footer-banner-card:hover {
+.hero-banner-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 16px 36px rgba(16, 27, 85, 0.12), 0 4px 14px rgba(242, 13, 79, 0.15);
     border-color: #FFD13B;
 }
 
-.hero-banner-img,
-.footer-banner-img {
+.hero-banner-img {
     width: 100%;
     height: auto;
     display: block;
     aspect-ratio: 1024 / 213;
     object-fit: cover;
-}
-
-.footer-banner-wrap {
-    margin-bottom: 36px;
 }
 
 .hero-grid {
@@ -1477,69 +1470,66 @@ button {
 }
 
 /* ==========================================================================
-   SECTION: FINAL CTA SECTION
+   SECTION: FINAL CTA / FOOTER BANNER SECTION
    ========================================================================== */
 .final-cta-section {
-    padding-top: 76px;
-    padding-bottom: 84px;
+    padding-top: 54px;
+    padding-bottom: 60px;
     background-color: var(--bg-cream);
     position: relative;
+}
+
+.footer-cta-banner {
+    position: relative;
+    width: 100%;
+    min-height: 290px;
+    background-image: url('images/banner-footer.jpg');
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    border-radius: 24px;
+    border: 2.5px solid #FFE682;
+    box-shadow: 0 14px 38px rgba(16, 27, 85, 0.10), 0 3px 10px rgba(0, 0, 0, 0.04);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 36px 20px;
     overflow: hidden;
 }
 
-.final-cta-wrap {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+.footer-cta-content {
     position: relative;
     z-index: 2;
-}
-
-.cta-character-col {
-    flex: 0 0 200px;
-    display: flex;
-    justify-content: center;
-}
-
-.cta-character-img {
-    width: 190px;
-    height: 190px;
-    object-fit: contain;
-    filter: drop-shadow(0 10px 18px rgba(16, 27, 85, 0.08));
-    animation: floatGentle 3s ease-in-out infinite alternate;
-}
-
-.char-girl {
-    animation-delay: 1.5s;
-}
-
-@keyframes floatGentle {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-8px); }
-}
-
-.final-cta-center {
-    flex: 1;
+    max-width: 530px;
     text-align: center;
-    max-width: 620px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.90);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 24px 32px 20px;
+    border-radius: 24px;
+    border: 1.5px solid rgba(255, 255, 255, 0.95);
+    box-shadow: 0 8px 24px rgba(16, 27, 85, 0.08);
 }
 
 .final-cta-title {
     font-family: var(--font-heading);
-    font-size: 2.35rem;
+    font-size: 2.05rem;
     font-weight: 800;
     color: var(--navy-dark);
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     letter-spacing: -0.01em;
+    line-height: 1.2;
 }
 
 .final-cta-sub {
     font-family: var(--font-heading);
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     font-weight: 600;
     color: var(--text-main);
-    margin-bottom: 24px;
+    margin-bottom: 18px;
 }
 
 .price-highlight {
@@ -1547,25 +1537,26 @@ button {
     font-weight: 800;
 }
 
-.final-cta-center .trust-row {
+.footer-cta-content .btn-primary-pill {
+    padding: 13px 34px;
+    font-size: 1.05rem;
+    box-shadow: 0 6px 20px rgba(242, 13, 79, 0.35);
+}
+
+.footer-cta-content .btn-primary-pill:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(242, 13, 79, 0.45);
+}
+
+.footer-cta-content .trust-row {
+    display: flex;
+    align-items: center;
     justify-content: center;
-}
-
-/* Floating stickers for Final CTA */
-.final-deco-sun {
-    position: absolute;
-    top: 20px;
-    right: 25%;
-    font-size: 2.2rem;
-    animation: rotateSlow 20s linear infinite;
-}
-
-.final-deco-heart {
-    position: absolute;
-    top: 30px;
-    left: 26%;
-    font-size: 1.8rem;
-    animation: pulseHeart 2s infinite ease-in-out;
+    gap: 18px;
+    margin-top: 14px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--navy-dark);
 }
 
 /* ==========================================================================
@@ -1616,8 +1607,48 @@ button {
 
     .hero-section { padding-top: 20px; padding-bottom: 36px; }
     .hero-banner-wrap { margin-bottom: 22px; }
-    .hero-banner-card, .footer-banner-card { border-radius: 14px; border-width: 1.5px; }
-    .footer-banner-wrap { margin-bottom: 24px; }
+    .hero-banner-card { border-radius: 14px; border-width: 1.5px; }
+
+    .final-cta-section {
+        padding-top: 32px;
+        padding-bottom: 36px;
+    }
+
+    .footer-cta-banner {
+        min-height: 280px;
+        padding: 24px 14px;
+        border-radius: 18px;
+        border-width: 2px;
+    }
+
+    .footer-cta-content {
+        padding: 20px 16px 18px;
+        border-radius: 18px;
+        max-width: 100%;
+        background: rgba(255, 255, 255, 0.94);
+    }
+
+    .final-cta-title {
+        font-size: 1.45rem;
+    }
+
+    .final-cta-sub {
+        font-size: 0.95rem;
+        margin-bottom: 14px;
+    }
+
+    .footer-cta-content .btn-primary-pill {
+        width: 100%;
+        font-size: 0.98rem;
+        padding: 12px 20px;
+    }
+
+    .footer-cta-content .trust-row {
+        flex-direction: column;
+        gap: 6px;
+        margin-top: 10px;
+        font-size: 0.78rem;
+    }
     .hero-grid {
         grid-template-columns: 1fr;
         gap: 32px;
