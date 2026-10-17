@@ -185,39 +185,85 @@
             </div>
         </section>
 
-        <!-- ===== CATEGORY CIRCLES BAR (Below Hero) ===== -->
+        <!-- ===== CATEGORY PILLS BAR (Below Hero - Full Width) ===== -->
         <section class="category-bar-section" aria-label="Preschool Activity Categories">
-            <div class="container category-bar-grid">
+            <!-- Left Decorative Cluster (Leaves + Heart + Star) -->
+            <div class="cat-deco-left" aria-hidden="true">
+                <svg class="cat-deco-leaves" width="80" height="96" viewBox="0 0 80 96" fill="none">
+                    <path d="M0 48 C20 48 56 36 68 10 C50 8 26 22 0 48 Z" fill="#22C55E"/>
+                    <path d="M0 48 C22 38 44 26 68 10" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round"/>
+                    <path d="M0 72 C16 72 46 64 56 44 C40 42 20 52 0 72 Z" fill="#16A34A"/>
+                    <path d="M0 72 C18 64 36 54 56 44" stroke="#15803D" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <div class="cat-deco-floaters-left">
+                    <svg class="cat-deco-heart" width="28" height="28" viewBox="0 0 24 24" fill="#FF5B84">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                    <svg class="cat-deco-star-left" width="20" height="20" viewBox="0 0 24 24" fill="#FFC72C">
+                        <polygon points="12,2 15,9 22,9 17,14 19,21 12,17 5,21 7,14 2,9 9,9"/>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Full Width Category Items Wrapper -->
+            <div class="category-bar-wrapper">
                 <!-- Alphabets -->
-                <a href="#whats-inside" class="category-circle-item">
-                    <div class="category-circle cat-bg-pink">🔤</div>
-                    <span class="category-circle-label">Alphabets</span>
+                <a href="#whats-inside" class="category-pill-card">
+                    <div class="category-pill pill-alphabets">
+                        <img src="images/cat-alphabets.svg" alt="Alphabets" class="cat-pill-icon" width="46" height="46">
+                    </div>
+                    <span class="category-pill-label">Alphabets</span>
                 </a>
                 <!-- Numbers -->
-                <a href="#whats-inside" class="category-circle-item">
-                    <div class="category-circle cat-bg-blue">🔢</div>
-                    <span class="category-circle-label">Numbers</span>
+                <a href="#whats-inside" class="category-pill-card">
+                    <div class="category-pill pill-numbers">
+                        <img src="images/cat-numbers.svg" alt="Numbers" class="cat-pill-icon" width="46" height="46">
+                    </div>
+                    <span class="category-pill-label">Numbers</span>
                 </a>
                 <!-- Shapes -->
-                <a href="#whats-inside" class="category-circle-item">
-                    <div class="category-circle cat-bg-green">🔷</div>
-                    <span class="category-circle-label">Shapes</span>
+                <a href="#whats-inside" class="category-pill-card">
+                    <div class="category-pill pill-shapes">
+                        <img src="images/cat-shapes.svg" alt="Shapes" class="cat-pill-icon" width="46" height="46">
+                    </div>
+                    <span class="category-pill-label">Shapes</span>
                 </a>
                 <!-- Animals -->
-                <a href="#whats-inside" class="category-circle-item">
-                    <div class="category-circle cat-bg-yellow">🦁</div>
-                    <span class="category-circle-label">Animals</span>
+                <a href="#whats-inside" class="category-pill-card">
+                    <div class="category-pill pill-animals">
+                        <img src="images/cat-animals.svg" alt="Animals" class="cat-pill-icon" width="46" height="46">
+                    </div>
+                    <span class="category-pill-label">Animals</span>
                 </a>
                 <!-- Tracing -->
-                <a href="#whats-inside" class="category-circle-item">
-                    <div class="category-circle cat-bg-purple">✍️</div>
-                    <span class="category-circle-label">Tracing</span>
+                <a href="#whats-inside" class="category-pill-card">
+                    <div class="category-pill pill-tracing">
+                        <img src="images/cat-tracing.svg" alt="Tracing" class="cat-pill-icon" width="46" height="46">
+                    </div>
+                    <span class="category-pill-label">Tracing</span>
                 </a>
                 <!-- Coloring -->
-                <a href="#whats-inside" class="category-circle-item">
-                    <div class="category-circle cat-bg-rose">🎨</div>
-                    <span class="category-circle-label">Coloring</span>
+                <a href="#whats-inside" class="category-pill-card">
+                    <div class="category-pill pill-coloring">
+                        <img src="images/cat-coloring.svg" alt="Coloring" class="cat-pill-icon" width="46" height="46">
+                    </div>
+                    <span class="category-pill-label">Coloring</span>
                 </a>
+            </div>
+
+            <!-- Right Decorative Cluster (Leaves + Star) -->
+            <div class="cat-deco-right" aria-hidden="true">
+                <div class="cat-deco-floaters-right">
+                    <svg class="cat-deco-star-right" width="24" height="24" viewBox="0 0 24 24" fill="#FFC72C">
+                        <polygon points="12,2 15,9 22,9 17,14 19,21 12,17 5,21 7,14 2,9 9,9"/>
+                    </svg>
+                </div>
+                <svg class="cat-deco-leaves-right" width="80" height="96" viewBox="0 0 80 96" fill="none">
+                    <path d="M80 48 C60 48 24 36 12 10 C30 8 54 22 80 48 Z" fill="#22C55E"/>
+                    <path d="M80 48 C58 38 36 26 12 10" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round"/>
+                    <path d="M80 72 C64 72 34 64 24 44 C40 42 60 52 80 72 Z" fill="#16A34A"/>
+                    <path d="M80 72 C62 64 44 54 24 44" stroke="#15803D" stroke-width="2" stroke-linecap="round"/>
+                </svg>
             </div>
         </section>
 
