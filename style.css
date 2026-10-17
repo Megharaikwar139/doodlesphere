@@ -361,7 +361,7 @@ button {
     position: relative;
     width: 100%;
     min-height: 480px;
-    background-image: url('images/banner-hero.jpg');
+    background-image: url('images/banner-hero.png');
     background-size: cover;
     background-position: center bottom;
     background-repeat: no-repeat;
@@ -1444,7 +1444,7 @@ button {
     position: relative;
     width: 100%;
     min-height: 310px;
-    background-image: url('images/banner-footer.jpg');
+    background-image: url('images/banner-footer.png');
     background-size: cover;
     background-position: center bottom;
     background-repeat: no-repeat;
