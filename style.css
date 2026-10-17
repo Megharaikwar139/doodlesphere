@@ -346,59 +346,41 @@ button {
 }
 
 /* ==========================================================================
-   HERO SECTION (Pixel-Perfect Match to Reference Image)
+   HERO SECTION (Full-Width Background Banner with Centered Content)
    ========================================================================== */
 .hero-section {
     position: relative;
-    padding-top: 0;
-    padding-bottom: 48px;
+    padding: 0;
+    margin: 0;
     background-color: #FFFDF6;
     overflow: hidden;
-}
-
-/* --- Hero Full-Width Panoramic Banner --- */
-.hero-banner-wrap {
     width: 100%;
-    margin-bottom: 36px;
-    overflow: hidden;
 }
 
-.hero-banner-card {
-    display: block;
+.hero-banner-bg {
+    position: relative;
     width: 100%;
-    overflow: hidden;
-    text-decoration: none;
-    border: none;
-    border-radius: 0;
-    box-shadow: 0 4px 18px rgba(16, 27, 85, 0.05);
-}
-
-.hero-banner-card:hover {
-    transform: none;
-}
-
-.hero-banner-img {
-    width: 100%;
-    height: auto;
-    display: block;
-    aspect-ratio: 1024 / 213;
-    object-fit: cover;
-}
-
-.hero-grid {
-    display: grid;
-    grid-template-columns: 1.12fr 1fr;
-    gap: 36px;
+    min-height: 480px;
+    background-image: url('images/banner-hero.jpg');
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    padding: 38px 20px 42px;
 }
 
-/* --- Hero Left Column --- */
-.hero-left {
+.hero-center-content {
     position: relative;
     z-index: 2;
+    max-width: 580px;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
+    background: none;
 }
 
 /* Yellow Scalloped Headline Cloud */
@@ -617,8 +599,9 @@ button {
 .hero-cta-group {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
 }
 
 .btn-hero-complete {
@@ -652,10 +635,12 @@ button {
 .hero-trust-bar {
     display: flex;
     align-items: center;
-    gap: 18px;
+    justify-content: center;
+    gap: 16px;
     font-size: 0.82rem;
-    font-weight: 700;
-    color: #475569;
+    font-weight: 800;
+    color: var(--navy-dark);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.95);
     flex-wrap: wrap;
     margin-top: 4px;
 }
@@ -664,30 +649,6 @@ button {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-}
-
-/* --- Hero Right Column (Photo Seamless Presentation) --- */
-.hero-right {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero-photo-wrapper {
-    position: relative;
-    width: 100%;
-    max-width: 560px;
-    border-radius: 20px;
-    overflow: hidden;
-}
-
-.hero-girl-img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 20px;
-    object-fit: contain;
 }
 
 /* ==========================================================================
@@ -1606,9 +1567,30 @@ button {
     .nav-desktop-links, .nav-cta-btn { display: none; }
     .hamburger-btn { display: flex; }
 
-    .hero-section { padding-top: 0; padding-bottom: 36px; }
-    .hero-banner-wrap { margin-bottom: 24px; }
-    .hero-banner-card { border-radius: 0; border: none; }
+    .hero-section { padding: 0; }
+    .hero-banner-bg {
+        min-height: auto;
+        padding: 28px 14px 32px;
+    }
+    .hero-center-content { max-width: 100%; }
+    .hero-yellow-cloud {
+        padding: 12px 20px 10px;
+        border-radius: 30px;
+    }
+    .hero-number-main { font-size: 2.35rem; }
+    .hero-title-main { font-size: 1.35rem; }
+    .hero-badges-row { gap: 6px; }
+    .hero-features-row { gap: 8px; margin-bottom: 14px; }
+    .btn-hero-complete {
+        width: 100%;
+        font-size: 1.05rem;
+        padding: 12px 20px;
+    }
+    .hero-trust-bar {
+        flex-direction: column;
+        gap: 4px;
+        font-size: 0.78rem;
+    }
 
     .final-cta-section {
         padding: 0;

@@ -71,18 +71,10 @@ $product_price = "₹199";
     </header>
 
     <main>
-        <!-- ===== HERO SECTION ===== -->
+        <!-- ===== HERO SECTION (Full-Width Background Banner) ===== -->
         <section class="hero-section" id="hero">
-            <!-- Hero Panoramic Banner (Full Width) -->
-            <div class="hero-banner-wrap">
-                <a href="<?php echo htmlspecialchars($purchase_url); ?>" class="hero-banner-card js-purchase-btn" aria-label="12,500+ Preschool Activities Printable Bundle">
-                    <img src="images/banner-hero.jpg" alt="12,500+ Preschool Learning and Coloring Activities Bundle" class="hero-banner-img" width="1024" height="213" fetchpriority="high">
-                </a>
-            </div>
-
-            <div class="container hero-grid">
-                <!-- Left Column -->
-                <div class="hero-left">
+            <div class="hero-banner-bg">
+                <div class="hero-center-content">
                     <!-- Headline Cloud with surrounding stars and leaves -->
                     <div class="hero-headline-cloud-wrap">
                         <!-- Top-Left Star & Sparkle -->
@@ -188,14 +180,6 @@ $product_price = "₹199";
                                 Instant Access After Payment
                             </span>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Right Column (Exact Hero Artwork from Reference) -->
-                <div class="hero-right">
-                    <div class="hero-photo-wrapper">
-                        <!-- Main Hero Photo & Artwork from Reference -->
-                        <img src="images/hero-girl-exact.png" alt="Smiling preschool girl drawing on a worksheet" class="hero-girl-img" width="608" height="532" fetchpriority="high">
                     </div>
                 </div>
             </div>
