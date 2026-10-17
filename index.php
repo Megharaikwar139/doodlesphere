@@ -73,8 +73,8 @@ $product_price = "₹199";
     <main>
         <!-- ===== HERO SECTION ===== -->
         <section class="hero-section" id="hero">
-            <!-- Hero Panoramic Banner -->
-            <div class="container hero-banner-wrap">
+            <!-- Hero Panoramic Banner (Full Width) -->
+            <div class="hero-banner-wrap">
                 <a href="<?php echo htmlspecialchars($purchase_url); ?>" class="hero-banner-card js-purchase-btn" aria-label="12,500+ Preschool Activities Printable Bundle">
                     <img src="images/banner-hero.jpg" alt="12,500+ Preschool Learning and Coloring Activities Bundle" class="hero-banner-img" width="1024" height="213" fetchpriority="high">
                 </a>
@@ -653,28 +653,26 @@ $product_price = "₹199";
             </div>
         </section>
 
-        <!-- ===== FINAL CTA / FOOTER BANNER SECTION ===== -->
+        <!-- ===== FINAL CTA / FOOTER BANNER SECTION (Full Width) ===== -->
         <section class="final-cta-section">
-            <div class="container">
-                <div class="footer-cta-banner">
-                    <!-- Center Offer Content -->
-                    <div class="footer-cta-content">
-                        <h2 class="final-cta-title">Ready to Fill Your Activity Library?</h2>
-                        <p class="final-cta-sub">12,500+ preschool activities for just <span class="price-highlight"><?php echo $product_price; ?></span>.</p>
+            <div class="footer-cta-banner">
+                <!-- Center Offer Content -->
+                <div class="footer-cta-content">
+                    <h2 class="final-cta-title">Ready to Fill Your Activity Library?</h2>
+                    <p class="final-cta-sub">12,500+ preschool activities for just <span class="price-highlight"><?php echo $product_price; ?></span>.</p>
 
-                        <a href="<?php echo htmlspecialchars($purchase_url); ?>" class="btn-primary-pill btn-large js-purchase-btn">
-                            Get Instant Access – <?php echo $product_price; ?> &rarr;
-                        </a>
+                    <a href="<?php echo htmlspecialchars($purchase_url); ?>" class="btn-primary-pill btn-large js-purchase-btn">
+                        Get Instant Access – <?php echo $product_price; ?> &rarr;
+                    </a>
 
-                        <div class="trust-row">
-                            <div class="trust-item">
-                                <span class="trust-icon">🛡️</span>
-                                <span>Secure Payment via Cashfree</span>
-                            </div>
-                            <div class="trust-item">
-                                <span class="trust-icon">⚡</span>
-                                <span>Instant Access After Payment</span>
-                            </div>
+                    <div class="trust-row">
+                        <div class="trust-item">
+                            <span class="trust-icon">🛡️</span>
+                            <span>Secure Payment via Cashfree</span>
+                        </div>
+                        <div class="trust-item">
+                            <span class="trust-icon">⚡</span>
+                            <span>Instant Access After Payment</span>
                         </div>
                     </div>
                 </div>

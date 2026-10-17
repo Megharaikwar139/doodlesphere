@@ -350,33 +350,31 @@ button {
    ========================================================================== */
 .hero-section {
     position: relative;
-    padding-top: 28px;
+    padding-top: 0;
     padding-bottom: 48px;
     background-color: #FFFDF6;
     overflow: hidden;
 }
 
-/* --- Hero & Footer Panoramic Banners --- */
+/* --- Hero Full-Width Panoramic Banner --- */
 .hero-banner-wrap {
-    margin-bottom: 32px;
+    width: 100%;
+    margin-bottom: 36px;
+    overflow: hidden;
 }
 
 .hero-banner-card {
     display: block;
     width: 100%;
-    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 10px 28px rgba(16, 27, 85, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
-    border: 2.5px solid #FFE682;
-    background-color: #FFFDF7;
-    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth), border-color var(--transition-smooth);
     text-decoration: none;
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 4px 18px rgba(16, 27, 85, 0.05);
 }
 
 .hero-banner-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 16px 36px rgba(16, 27, 85, 0.12), 0 4px 14px rgba(242, 13, 79, 0.15);
-    border-color: #FFD13B;
+    transform: none;
 }
 
 .hero-banner-img {
@@ -1470,66 +1468,68 @@ button {
 }
 
 /* ==========================================================================
-   SECTION: FINAL CTA / FOOTER BANNER SECTION
+   SECTION: FINAL CTA / FOOTER BANNER SECTION (Full Width, No White Card)
    ========================================================================== */
 .final-cta-section {
-    padding-top: 54px;
-    padding-bottom: 60px;
+    padding: 0;
+    margin: 0;
     background-color: var(--bg-cream);
     position: relative;
+    width: 100%;
+    overflow: hidden;
 }
 
 .footer-cta-banner {
     position: relative;
     width: 100%;
-    min-height: 290px;
+    min-height: 310px;
     background-image: url('images/banner-footer.jpg');
     background-size: cover;
     background-position: center bottom;
     background-repeat: no-repeat;
-    border-radius: 24px;
-    border: 2.5px solid #FFE682;
-    box-shadow: 0 14px 38px rgba(16, 27, 85, 0.10), 0 3px 10px rgba(0, 0, 0, 0.04);
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 36px 20px;
-    overflow: hidden;
+    padding: 44px 20px;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
 }
 
 .footer-cta-content {
     position: relative;
     z-index: 2;
-    max-width: 530px;
+    max-width: 560px;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: rgba(255, 255, 255, 0.90);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    padding: 24px 32px 20px;
-    border-radius: 24px;
-    border: 1.5px solid rgba(255, 255, 255, 0.95);
-    box-shadow: 0 8px 24px rgba(16, 27, 85, 0.08);
+    background: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    padding: 0;
+    border: none;
+    box-shadow: none;
 }
 
 .final-cta-title {
     font-family: var(--font-heading);
-    font-size: 2.05rem;
+    font-size: 2.25rem;
     font-weight: 800;
     color: var(--navy-dark);
-    margin-bottom: 6px;
+    margin-bottom: 8px;
     letter-spacing: -0.01em;
     line-height: 1.2;
+    text-shadow: 0 1px 3px rgba(255, 255, 255, 0.9), 0 0 16px rgba(255, 255, 255, 0.7);
 }
 
 .final-cta-sub {
     font-family: var(--font-heading);
-    font-size: 1.15rem;
-    font-weight: 600;
+    font-size: 1.25rem;
+    font-weight: 700;
     color: var(--text-main);
-    margin-bottom: 18px;
+    margin-bottom: 20px;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.95);
 }
 
 .price-highlight {
@@ -1538,14 +1538,14 @@ button {
 }
 
 .footer-cta-content .btn-primary-pill {
-    padding: 13px 34px;
-    font-size: 1.05rem;
-    box-shadow: 0 6px 20px rgba(242, 13, 79, 0.35);
+    padding: 14px 36px;
+    font-size: 1.1rem;
+    box-shadow: 0 6px 20px rgba(242, 13, 79, 0.45);
 }
 
 .footer-cta-content .btn-primary-pill:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(242, 13, 79, 0.45);
+    box-shadow: 0 8px 26px rgba(242, 13, 79, 0.55);
 }
 
 .footer-cta-content .trust-row {
@@ -1554,9 +1554,10 @@ button {
     justify-content: center;
     gap: 18px;
     margin-top: 14px;
-    font-size: 0.85rem;
-    font-weight: 700;
+    font-size: 0.88rem;
+    font-weight: 800;
     color: var(--navy-dark);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.95);
 }
 
 /* ==========================================================================
@@ -1605,49 +1606,47 @@ button {
     .nav-desktop-links, .nav-cta-btn { display: none; }
     .hamburger-btn { display: flex; }
 
-    .hero-section { padding-top: 20px; padding-bottom: 36px; }
-    .hero-banner-wrap { margin-bottom: 22px; }
-    .hero-banner-card { border-radius: 14px; border-width: 1.5px; }
+    .hero-section { padding-top: 0; padding-bottom: 36px; }
+    .hero-banner-wrap { margin-bottom: 24px; }
+    .hero-banner-card { border-radius: 0; border: none; }
 
     .final-cta-section {
-        padding-top: 32px;
-        padding-bottom: 36px;
+        padding: 0;
     }
 
     .footer-cta-banner {
         min-height: 280px;
-        padding: 24px 14px;
-        border-radius: 18px;
-        border-width: 2px;
+        padding: 30px 16px;
+        border-radius: 0;
+        border: none;
     }
 
     .footer-cta-content {
-        padding: 20px 16px 18px;
-        border-radius: 18px;
+        padding: 0;
         max-width: 100%;
-        background: rgba(255, 255, 255, 0.94);
+        background: none;
     }
 
     .final-cta-title {
-        font-size: 1.45rem;
+        font-size: 1.55rem;
     }
 
     .final-cta-sub {
-        font-size: 0.95rem;
-        margin-bottom: 14px;
+        font-size: 1rem;
+        margin-bottom: 16px;
     }
 
     .footer-cta-content .btn-primary-pill {
         width: 100%;
-        font-size: 0.98rem;
+        font-size: 1rem;
         padding: 12px 20px;
     }
 
     .footer-cta-content .trust-row {
         flex-direction: column;
         gap: 6px;
-        margin-top: 10px;
-        font-size: 0.78rem;
+        margin-top: 12px;
+        font-size: 0.8rem;
     }
     .hero-grid {
         grid-template-columns: 1fr;
