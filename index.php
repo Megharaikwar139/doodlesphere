@@ -278,10 +278,10 @@ $product_price = "₹199";
 
         <!-- ===== "SEE WHAT'S INSIDE" SECTION ===== -->
         <section class="see-inside-section" id="whats-inside">
-            <!-- Wavy Transition -->
+            <!-- Organic Gentle Top Wave -->
             <div class="section-wave-top" aria-hidden="true">
-                <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path d="M0,0 C300,60 900,0 1200,40 L1200,0 L0,0 Z" fill="#FFFDF7"></path>
+                <svg viewBox="0 0 1440 36" preserveAspectRatio="none">
+                    <path d="M0,0 C360,18 720,10 1080,16 C1260,20 1380,12 1440,6 L1440,0 L0,0 Z" fill="#FFFDF7"></path>
                 </svg>
             </div>
 
@@ -323,6 +323,13 @@ $product_price = "₹199";
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <!-- Organic Downward Curved Bottom Wave -->
+            <div class="section-wave-bottom" aria-hidden="true">
+                <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+                    <path d="M0,15 C360,65 1080,65 1440,15 L1440,80 L0,80 Z" fill="#FFFDF7"></path>
+                </svg>
             </div>
         </section>
 
