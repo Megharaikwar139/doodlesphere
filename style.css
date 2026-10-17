@@ -350,10 +350,48 @@ button {
    ========================================================================== */
 .hero-section {
     position: relative;
-    padding-top: 36px;
+    padding-top: 28px;
     padding-bottom: 48px;
     background-color: #FFFDF6;
     overflow: hidden;
+}
+
+/* --- Hero & Footer Panoramic Banners --- */
+.hero-banner-wrap {
+    margin-bottom: 32px;
+}
+
+.hero-banner-card,
+.footer-banner-card {
+    display: block;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 28px rgba(16, 27, 85, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
+    border: 2.5px solid #FFE682;
+    background-color: #FFFDF7;
+    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth), border-color var(--transition-smooth);
+    text-decoration: none;
+}
+
+.hero-banner-card:hover,
+.footer-banner-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px rgba(16, 27, 85, 0.12), 0 4px 14px rgba(242, 13, 79, 0.15);
+    border-color: #FFD13B;
+}
+
+.hero-banner-img,
+.footer-banner-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 1024 / 213;
+    object-fit: cover;
+}
+
+.footer-banner-wrap {
+    margin-bottom: 36px;
 }
 
 .hero-grid {
@@ -1576,7 +1614,10 @@ button {
     .nav-desktop-links, .nav-cta-btn { display: none; }
     .hamburger-btn { display: flex; }
 
-    .hero-section { padding-top: 24px; padding-bottom: 36px; }
+    .hero-section { padding-top: 20px; padding-bottom: 36px; }
+    .hero-banner-wrap { margin-bottom: 22px; }
+    .hero-banner-card, .footer-banner-card { border-radius: 14px; border-width: 1.5px; }
+    .footer-banner-wrap { margin-bottom: 24px; }
     .hero-grid {
         grid-template-columns: 1fr;
         gap: 32px;
