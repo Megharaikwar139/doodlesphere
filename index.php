@@ -4,7 +4,7 @@
  * Main Landing Page
  */
 $page_title = "DoodleSphere - 12,500+ Preschool Activities Printable Bundle";
-$purchase_url = "payment.php";
+$purchase_url = "https://rzp.io/rzp/TdlY7r59";
 $product_price = "₹199";
 ?>
 <!DOCTYPE html>
@@ -171,7 +171,7 @@ $product_price = "₹199";
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="#0875D1">
                                     <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
                                 </svg>
-                                Secure Payment via Cashfree
+                                Secure Payment via Razorpay
                             </span>
                             <span class="trust-badge-item">
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B">
@@ -491,7 +491,7 @@ $product_price = "₹199";
                             <span class="step-badge-num step-badge-pink">1</span>
                             <div class="step-icon-box">🛒</div>
                             <h4 class="step-title">Purchase</h4>
-                            <p class="step-desc">Complete your secure payment via Cashfree.</p>
+                            <p class="step-desc">Complete your secure payment via Razorpay.</p>
                         </div>
 
                         <div class="step-arrow" aria-hidden="true">&rarr;</div>
@@ -561,7 +561,7 @@ $product_price = "₹199";
                             <div class="trust-row">
                                 <div class="trust-item">
                                     <span class="trust-icon">🛡️</span>
-                                    <span>Secure Payment via Cashfree</span>
+                                    <span>Secure Payment via Razorpay</span>
                                 </div>
                                 <div class="trust-item">
                                     <span class="trust-icon">⚡</span>
@@ -652,7 +652,7 @@ $product_price = "₹199";
                     <div class="trust-row">
                         <div class="trust-item">
                             <span class="trust-icon">🛡️</span>
-                            <span>Secure Payment via Cashfree</span>
+                            <span>Secure Payment via Razorpay</span>
                         </div>
                         <div class="trust-item">
                             <span class="trust-icon">⚡</span>

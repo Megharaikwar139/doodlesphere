@@ -4,9 +4,9 @@
 
 /**
  * CONFIGURATION: Single Configurable Purchase URL
- * Update this URL to point to Cashfree checkout or payment gateway
+ * Pointing directly to Razorpay Payment Page
  */
-const PURCHASE_URL = "payment.php";
+const PURCHASE_URL = "https://rzp.io/rzp/TdlY7r59";
 
 document.addEventListener('DOMContentLoaded', function () {
 

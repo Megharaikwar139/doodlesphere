@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You! - DoodleSphere Mega Bundle</title>
+    <meta name="robots" content="noindex">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Fredoka:wght@500;600;700;800&family=Nunito:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-pink: #F20D4F;
+            --primary-pink-hover: #D60641;
+            --navy-dark: #101B55;
+            --text-main: #1E293B;
+            --text-muted: #64748B;
+            --brand-blue: #0875D1;
+            --accent-yellow: #FFD13B;
+            --accent-green: #10B981;
+            --font-heading: 'Fredoka', sans-serif;
+            --font-body: 'Nunito', sans-serif;
+            --font-cursive: 'Caveat', cursive;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: var(--font-body);
+            background: linear-gradient(135deg, #FFF8E7 0%, #FEF3C7 35%, #E0F2FE 100%);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        .thank-header {
+            background: #ffffff;
+            border-bottom: 3px solid #ffecd0;
+            padding: 16px 24px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(16, 27, 85, 0.05);
+        }
+        .thank-header img {
+            height: 52px;
+            width: auto;
+        }
+
+        /* Container */
+        .thank-container {
+            max-width: 720px;
+            margin: 40px auto 60px;
+            padding: 0 20px;
+            flex: 1;
+        }
+
+        /* Card */
+        .thank-card {
+            background: #ffffff;
+            border-radius: 28px;
+            padding: 44px 36px;
+            box-shadow: 0 20px 50px rgba(16, 27, 85, 0.08);
+            border: 3px solid #BBF7D0;
+            text-align: center;
+            position: relative;
+        }
+
+        /* Success Animation Icon */
+        .confetti-badge {
+            font-size: 72px;
+            line-height: 1;
+            margin-bottom: 16px;
+            animation: bounceIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        @keyframes bounceIn {
+            0% { transform: scale(0.2); opacity: 0; }
+            70% { transform: scale(1.15); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .success-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #DCFCE7;
+            color: #15803D;
+            font-weight: 800;
+            font-size: 14px;
+            padding: 6px 18px;
+            border-radius: 50px;
+            border: 1px solid #86EFAC;
+            margin-bottom: 16px;
+        }
+
+        .thank-title {
+            font-family: var(--font-heading);
+            font-size: 36px;
+            color: var(--navy-dark);
+            margin-bottom: 12px;
+            font-weight: 800;
+        }
+
+        .thank-subtitle {
+            font-size: 17px;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 28px;
+        }
+
+        /* Payment ID Bar */
+        .payment-id-box {
+            background: #F8FAFC;
+            border: 2px dashed #E2E8F0;
+            border-radius: 14px;
+            padding: 12px 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            color: #475569;
+            margin-bottom: 32px;
+        }
+        .payment-id-box strong {
+            color: var(--navy-dark);
+        }
+
+        /* DOWNLOAD CTA BUTTON (BIG & PROMINENT) */
+        .download-box {
+            background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%);
+            border: 2px solid #FDE68A;
+            border-radius: 20px;
+            padding: 28px 24px;
+            margin-bottom: 36px;
+            box-shadow: 0 8px 20px rgba(245, 158, 11, 0.12);
+        }
+
+        .download-box h3 {
+            font-family: var(--font-heading);
+            font-size: 22px;
+            color: #92400E;
+            margin-bottom: 8px;
+        }
+
+        .download-box p {
+            font-size: 15px;
+            color: #78350F;
+            margin-bottom: 20px;
+        }
+
+        .btn-download {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: linear-gradient(135deg, #F20D4F 0%, #D60641 100%);
+            color: #ffffff;
+            font-family: var(--font-heading);
+            font-size: 20px;
+            font-weight: 700;
+            padding: 18px 36px;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 10px 25px rgba(242, 13, 79, 0.4);
+            transition: all 0.25s ease;
+            width: 100%;
+            max-width: 480px;
+        }
+
+        .btn-download:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 14px 30px rgba(242, 13, 79, 0.5);
+            background: linear-gradient(135deg, #FF1E62 0%, #E60046 100%);
+        }
+
+        .btn-download:active {
+            transform: translateY(0);
+        }
+
+        .btn-download svg {
+            width: 26px;
+            height: 26px;
+            fill: currentColor;
+            flex-shrink: 0;
+        }
+
+        /* 3 Steps Guide */
+        .steps-card {
+            background: #F8FAFC;
+            border-radius: 18px;
+            padding: 24px;
+            text-align: left;
+            margin-bottom: 30px;
+            border: 1px solid #E2E8F0;
+        }
+
+        .steps-card h4 {
+            font-family: var(--font-heading);
+            font-size: 18px;
+            color: var(--navy-dark);
+            margin-bottom: 16px;
+        }
+
+        .step-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            margin-bottom: 14px;
+        }
+        .step-item:last-child { margin-bottom: 0; }
+
+        .step-num {
+            width: 32px;
+            height: 32px;
+            background: #0875D1;
+            color: #ffffff;
+            font-weight: 800;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            flex-shrink: 0;
+        }
+
+        .step-text strong {
+            display: block;
+            font-size: 15px;
+            color: var(--navy-dark);
+            margin-bottom: 2px;
+        }
+        .step-text p {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        /* Support Box */
+        .support-box {
+            font-size: 14px;
+            color: var(--text-muted);
+            background: #FFFFFF;
+            padding: 16px;
+            border-radius: 12px;
+            border: 1px solid #E2E8F0;
+        }
+        .support-box a {
+            color: var(--brand-blue);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        /* Footer */
+        .thank-footer {
+            text-align: center;
+            padding: 24px 20px;
+            font-size: 13px;
+            color: var(--text-muted);
+            border-top: 1px solid #E2E8F0;
+            background: #ffffff;
+        }
+        .thank-footer a {
+            color: var(--primary-pink);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+            .thank-card { padding: 32px 20px; }
+            .thank-title { font-size: 28px; }
+            .btn-download { font-size: 18px; padding: 16px 24px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="thank-header">
+        <a href="index.html">
+            <img src="images/logo.png" alt="DoodleSphere Logo">
+        </a>
+    </header>
+
+    <!-- Main Content -->
+    <main class="thank-container">
+        <div class="thank-card">
+            
+            <div class="confetti-badge">🎉</div>
+            <div class="success-pill">✓ Payment Verified Successfully</div>
+            
+            <h1 class="thank-title">Thank You for Your Order!</h1>
+            <p class="thank-subtitle">
+                Your payment has been received. Your <strong>12,500+ Preschool Activities & Coloring Bundle</strong> is ready for instant download!
+            </p>
+
+            <!-- Dynamic Payment / Order ID -->
+            <div class="payment-id-box">
+                <span>Receipt / Order:</span>
+                <strong id="displayPaymentId">Loading...</strong>
+            </div>
+
+            <!-- PROMINENT DOWNLOAD BOX -->
+            <div class="download-box">
+                <h3>🚀 Your Download Link</h3>
+                <p>Click below to open and save all worksheets, coloring pages, and tracing sheets directly to your device:</p>
+                
+                <!-- NOTE: Replace YOUR_GOOGLE_DRIVE_OR_PDF_LINK with your real Google Drive / PDF link -->
+                <a href="https://drive.google.com/" target="_blank" class="btn-download" id="mainDownloadBtn">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/>
+                    </svg>
+                    <span>Download All 12,500+ Files</span>
+                </a>
+            </div>
+
+            <!-- 3 Easy Steps to Use -->
+            <div class="steps-card">
+                <h4>📖 How to Access &amp; Print</h4>
+                
+                <div class="step-item">
+                    <div class="step-num">1</div>
+                    <div class="step-text">
+                        <strong>Click "Download All Files"</strong>
+                        <p>This opens your Google Drive folder containing all categorized PDF files.</p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-num">2</div>
+                    <div class="step-text">
+                        <strong>Save to your Device</strong>
+                        <p>Save the folders or specific worksheets to your phone, tablet, or laptop.</p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-num">3</div>
+                    <div class="step-text">
+                        <strong>Print anytime at home</strong>
+                        <p>Print as many copies as you like on any standard A4 printer!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Support Info -->
+            <div class="support-box">
+                Need help or have questions? Email us at <a href="mailto:support@doodlesphere.in">support@doodlesphere.in</a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="thank-footer">
+        <a href="index.html">← Back to DoodleSphere Home</a>
+        <br><br>
+        © 2026 DoodleSphere. All rights reserved.
+    </footer>
+
+    <script>
+        // Extract payment_id or order_id from URL query params (e.g. ?payment_id=pay_xxxx)
+        const urlParams = new URLSearchParams(window.location.search);
+        const paymentId = urlParams.get('payment_id') || urlParams.get('razorpay_payment_id') || ('DS-' + Math.floor(100000 + Math.random() * 900000));
+        
+        document.getElementById('displayPaymentId').textContent = paymentId;
+    </script>
+</body>
+</html>
