@@ -4,9 +4,9 @@
 
 /**
  * CONFIGURATION: Single Configurable Purchase URL
- * Pointing directly to Razorpay Payment Page
+ * Pointing directly to Superprofile Payment Page
  */
-const PURCHASE_URL = "https://rzp.io/rzp/TdlY7r59";
+const PURCHASE_URL = "https://superprofile.bio/vp/doodlesphere-bundle";
 
 document.addEventListener('DOMContentLoaded', function () {
 
