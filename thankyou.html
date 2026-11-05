@@ -9,7 +9,7 @@
     <!-- Open Graph Metadata -->
     <meta property="og:title" content="Thank You - DoodleSphere Mega Bundle">
     <meta property="og:description" content="Your 12,500+ preschool activities bundle is ready for instant download!">
-    <meta property="og:image" content="images/thankyou-card.jpg">
+    <meta property="og:image" content="images/thankyou-card.jpg?v=2">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -109,7 +109,111 @@
             transform: translateY(-1px);
         }
 
-        /* Main Container */
+        /* ACCESS CHECK SCREEN & ACCESS DENIED */
+        #accessCheckScreen {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 60vh;
+            padding: 20px;
+            text-align: center;
+        }
+        .access-checking-box {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 40px 30px;
+            max-width: 460px;
+            width: 100%;
+            box-shadow: 0 16px 40px rgba(16, 27, 85, 0.08);
+            border: 2px solid #E2E8F0;
+        }
+        .spinner {
+            width: 48px;
+            height: 48px;
+            border: 4px solid #E2E8F0;
+            border-top: 4px solid var(--brand-blue);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin: 0 auto 16px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .checking-text {
+            font-family: var(--font-heading);
+            font-size: 18px;
+            color: var(--navy-dark);
+            font-weight: 700;
+        }
+
+        .access-denied-card {
+            background: #ffffff;
+            border-radius: 28px;
+            padding: 44px 32px;
+            max-width: 520px;
+            width: 100%;
+            box-shadow: 0 20px 50px rgba(16, 27, 85, 0.1);
+            border: 3px solid #FECDD3;
+            text-align: center;
+            animation: fadeIn 0.4s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .denied-icon {
+            font-size: 56px;
+            line-height: 1;
+            margin-bottom: 16px;
+        }
+        .denied-title {
+            font-family: var(--font-heading);
+            font-size: 26px;
+            font-weight: 800;
+            color: #BE123C;
+            margin-bottom: 10px;
+        }
+        .denied-desc {
+            font-size: 15px;
+            color: var(--text-muted);
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        .denied-countdown {
+            display: inline-block;
+            background: #FFF1F2;
+            color: #9F1239;
+            font-weight: 800;
+            font-size: 14px;
+            padding: 8px 18px;
+            border-radius: 50px;
+            border: 1px solid #FECDD3;
+            margin-bottom: 22px;
+        }
+        .btn-denied-home {
+            display: inline-block;
+            background: linear-gradient(135deg, #0875D1 0%, #0284C7 100%);
+            color: #ffffff;
+            font-family: var(--font-heading);
+            font-size: 16px;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 12px 28px;
+            border-radius: 50px;
+            box-shadow: 0 6px 18px rgba(8, 117, 209, 0.35);
+            transition: all 0.2s ease;
+        }
+        .btn-denied-home:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(8, 117, 209, 0.45);
+        }
+
+        /* PROTECTED MAIN CONTENT (Hidden until payment is validated) */
+        #thankyouContent {
+            display: none;
+        }
+
         .main-wrap {
             max-width: 1040px;
             margin: 28px auto 60px;
@@ -192,41 +296,31 @@
             justify-content: center;
             transition: all 0.25s ease;
             outline: none;
-        }
-        .hotspot-btn::after {
-            content: '';
-            position: absolute;
-            inset: -4px;
-            border-radius: 50px;
-            opacity: 0;
-            transition: opacity 0.25s ease;
+            background: transparent;
         }
         .hotspot-coloring {
             left: 8.5%;
-            background: rgba(255, 29, 88, 0.02);
         }
         .hotspot-coloring:hover {
-            background: rgba(255, 29, 88, 0.15);
-            box-shadow: 0 4px 18px rgba(255, 29, 88, 0.35);
-            transform: scale(1.03);
+            transform: scale(1.04);
+            box-shadow: 0 4px 18px rgba(255, 29, 88, 0.45);
+            background: rgba(255, 29, 88, 0.08);
         }
         .hotspot-worksheets {
             left: 40.7%;
-            background: rgba(13, 148, 136, 0.02);
         }
         .hotspot-worksheets:hover {
-            background: rgba(13, 148, 136, 0.15);
-            box-shadow: 0 4px 18px rgba(13, 148, 136, 0.35);
-            transform: scale(1.03);
+            transform: scale(1.04);
+            box-shadow: 0 4px 18px rgba(13, 148, 136, 0.45);
+            background: rgba(13, 148, 136, 0.08);
         }
         .hotspot-bonus {
             left: 72.9%;
-            background: rgba(124, 58, 237, 0.02);
         }
         .hotspot-bonus:hover {
-            background: rgba(124, 58, 237, 0.15);
-            box-shadow: 0 4px 18px rgba(124, 58, 237, 0.35);
-            transform: scale(1.03);
+            transform: scale(1.04);
+            box-shadow: 0 4px 18px rgba(124, 58, 237, 0.45);
+            background: rgba(124, 58, 237, 0.08);
         }
 
         .sr-only {
@@ -574,8 +668,16 @@
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="main-wrap">
+    <!-- 1. ACCESS VERIFICATION SCREEN (Shown while validating purchase) -->
+    <div id="accessCheckScreen">
+        <div class="access-checking-box">
+            <div class="spinner"></div>
+            <p class="checking-text">Verifying your purchase access...</p>
+        </div>
+    </div>
+
+    <!-- 2. PROTECTED MAIN CONTENT (Only visible after valid payment verification) -->
+    <main class="main-wrap" id="thankyouContent">
         
         <!-- Status Bar -->
         <div class="order-status-bar">
@@ -594,7 +696,7 @@
         <!-- POSTER CARD (Full-fidelity graphic with interactive clickable buttons matching the PDF) -->
         <div class="poster-card">
             <div class="poster-wrapper">
-                <img src="images/thankyou-card.jpg" alt="DoodleSphere Thank You For Your Purchase" class="poster-img" width="1440" height="1092">
+                <img src="images/thankyou-card.jpg?v=2" alt="DoodleSphere Thank You For Your Purchase" class="poster-img" width="1440" height="1092">
 
                 <!-- Interactive Hotspots directly over the 3 "Click Here" buttons -->
                 <!-- 1. Coloring Pages -->
@@ -727,18 +829,105 @@
         &copy; 2026 DoodleSphere. All rights reserved.
     </footer>
 
+    <!-- ACCESS CONTROL & VERIFICATION SCRIPT -->
     <script>
-        // Extract payment_id or order_id from URL query params (e.g. ?payment_id=pay_xxxx)
-        const urlParams = new URLSearchParams(window.location.search);
-        const paymentId = urlParams.get('payment_id') || 
-                          urlParams.get('order_id') || 
-                          urlParams.get('razorpay_payment_id') || 
-                          ('DS-' + Math.floor(100000 + Math.random() * 900000));
-        
-        const displayEl = document.getElementById('displayPaymentId');
-        if (displayEl) {
-            displayEl.textContent = paymentId;
-        }
+        (function() {
+            // 1. Check URL Query Parameters for Payment Tokens / Success Flags
+            const params = new URLSearchParams(window.location.search);
+            const validPaymentKeys = [
+                'payment_id', 
+                'order_id', 
+                'transaction_id', 
+                'txn_id', 
+                'razorpay_payment_id', 
+                'token', 
+                'session_id', 
+                'sp_id',
+                'sp_payment_id'
+            ];
+            
+            let hasValidParam = validPaymentKeys.some(k => params.has(k) && params.get(k).trim() !== '');
+
+            const status = (params.get('status') || params.get('payment') || '').toLowerCase();
+            if (status === 'success' || status === 'completed' || params.get('success') === '1' || params.get('success') === 'true') {
+                hasValidParam = true;
+            }
+
+            // 2. Check Referrer (Did visitor come from payment gateway?)
+            const ref = (document.referrer || '').toLowerCase();
+            const isFromGateway = ref.includes('superprofile.bio') || 
+                                  ref.includes('razorpay.com') || 
+                                  ref.includes('cashfree.com') || 
+                                  ref.includes('stripe.com');
+
+            // 3. Check Session Storage (Persists within same tab if paid in current session)
+            let isSessionVerified = false;
+            try {
+                isSessionVerified = (sessionStorage.getItem('dsp_payment_verified') === 'true');
+            } catch (e) {}
+
+            const isAuthorized = hasValidParam || isFromGateway || isSessionVerified;
+
+            if (isAuthorized) {
+                // Save flag in session so page reload doesn't lock out legitimate buyer
+                try {
+                    sessionStorage.setItem('dsp_payment_verified', 'true');
+                } catch(e) {}
+
+                // Display protected content
+                const checkScreen = document.getElementById('accessCheckScreen');
+                const mainContent = document.getElementById('thankyouContent');
+                if (checkScreen) checkScreen.style.display = 'none';
+                if (mainContent) mainContent.style.display = 'block';
+
+                // Display dynamic payment/receipt id
+                const pid = params.get('payment_id') || 
+                            params.get('order_id') || 
+                            params.get('transaction_id') || 
+                            params.get('txn_id') || 
+                            params.get('razorpay_payment_id') || 
+                            ('SP-' + Math.floor(100000 + Math.random() * 900000));
+                
+                const displayEl = document.getElementById('displayPaymentId');
+                if (displayEl) {
+                    displayEl.textContent = pid;
+                }
+            } else {
+                // UNAUTHORIZED: Direct URL access without payment
+                // 1. Remove the entire downloads container from the DOM so links cannot be inspected
+                const mainContent = document.getElementById('thankyouContent');
+                if (mainContent) {
+                    mainContent.remove();
+                }
+
+                // 2. Show Access Denied message with countdown
+                const checkScreen = document.getElementById('accessCheckScreen');
+                if (checkScreen) {
+                    checkScreen.innerHTML = `
+                        <div class="access-denied-card">
+                            <div class="denied-icon">🔒</div>
+                            <h2 class="denied-title">Access Restricted</h2>
+                            <p class="denied-desc">This download page is only accessible after completing your purchase on the checkout page.</p>
+                            <div class="denied-countdown">Redirecting you to the home page in <span id="countdown">3</span> seconds...</div>
+                            <br>
+                            <a href="index.html" class="btn-denied-home">Return to Home Page</a>
+                        </div>
+                    `;
+                }
+
+                // 3. Auto redirect to index after 3 seconds
+                let count = 3;
+                const timer = setInterval(function() {
+                    count--;
+                    const countEl = document.getElementById('countdown');
+                    if (countEl) countEl.textContent = count;
+                    if (count <= 0) {
+                        clearInterval(timer);
+                        window.location.replace('index.html');
+                    }
+                }, 1000);
+            }
+        })();
     </script>
 </body>
 </html>
